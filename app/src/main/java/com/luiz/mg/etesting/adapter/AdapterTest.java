@@ -4,8 +4,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.luiz.mg.etesting.R;
@@ -34,6 +36,12 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
     public void onBindViewHolder(@NonNull ItemTestViewHolder holder, int position) {
         String test = listTests.get(position);
         holder.textTest.setText(test);
+        holder.cardTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Vai fazer esse teste?", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -45,10 +53,12 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
     public static class ItemTestViewHolder extends RecyclerView.ViewHolder{
 
         TextView textTest;
+        CardView cardTest;
 
         public ItemTestViewHolder(View view) {
             super(view);
             textTest = view.findViewById(R.id.titleTestId);
+            cardTest = view.findViewById(R.id.cardViewId);
         }
 
     }
