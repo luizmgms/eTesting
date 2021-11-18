@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/editTextLoginId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_in"
+        android:autofillHints=""
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="@dimen/field_in"
+        android:hint="@string/field_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPassId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_in"
+        android:autofillHints=""
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="@dimen/field_in"
+        android:hint="@string/field_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLoginId" />
+
+    <EditText
+        android:id="@+id/editTextPassAgainId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_in"
+        android:autofillHints=""
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="@dimen/field_in"
+        android:hint="@string/field_pass_again"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassId" />
+
+    <Button
+        android:id="@+id/buttonRegisterId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_register"
+        android:padding="@dimen/button"
+        android:layout_margin="@dimen/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassAgainId"/>
+
+    <TextView
+        android:id="@+id/textViewLoginId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doit_login"
+        android:padding="@dimen/text"
+        android:layout_margin="@dimen/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRegisterId"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

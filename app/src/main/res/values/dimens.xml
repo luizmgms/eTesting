@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="field_in">10dp</dimen>
+    <dimen name="button">10dp</dimen>
+    <dimen name="text">10dp</dimen>
+    <dimen name="pad_text_test">10dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="margin_card">5dp</dimen>
+</resources>

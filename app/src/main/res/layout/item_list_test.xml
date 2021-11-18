@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewId"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    android:layout_margin="@dimen/margin_card"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/titleTestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/example_teste"
+        android:padding="@dimen/pad_text_test"
+        android:layout_margin="@dimen/pad_text_test"
+        />
+
+    <TextView
+        android:id="@+id/dateTestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/date_test"
+        android:layout_gravity="end|top"
+        android:layout_margin="@dimen/pad_text_test"
+        />
+    <TextView
+        android:id="@+id/startTestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/start_at"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/pad_text_test"
+        />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/editTextLoginId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_in"
+        android:autofillHints=""
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="@dimen/field_in"
+        android:hint="@string/field_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPassId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_in"
+        android:autofillHints=""
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="@dimen/field_in"
+        android:hint="@string/field_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLoginId" />
+
+    <Button
+        android:id="@+id/buttonInId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_in"
+        android:padding="@dimen/button"
+        android:layout_margin="@dimen/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassId"/>
+
+    <TextView
+        android:id="@+id/textViewCadId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_register"
+        android:padding="@dimen/text"
+        android:layout_margin="@dimen/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonInId"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
