@@ -37,7 +37,8 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
         String test = listTests.get(position);
         holder.textTest.setText(test);
         holder.cardTest.setOnClickListener(view ->
-                Toast.makeText(view.getContext(), "Vai fazer esse teste?", Toast.LENGTH_SHORT).show());
+                Toast.makeText(view.getContext(), "Vai fazer o teste " + position + "?",
+                        Toast.LENGTH_SHORT).show());
     }
 
     @Override
