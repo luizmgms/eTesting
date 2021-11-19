@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,36 +8,56 @@
     app:cardCornerRadius="@dimen/card_corner_radius"
     app:cardElevation="@dimen/cardview_default_elevation"
     android:layout_margin="@dimen/margin_card"
-    android:visibility="visible">
+    android:visibility="visible"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
 
-    <TextView
-        android:id="@+id/titleTestId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:text="@string/example_teste"
-        android:padding="@dimen/pad_text_test"
-        android:layout_margin="@dimen/pad_text_test"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/dateTestId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/date_test"
-        android:layout_gravity="end|top"
-        android:layout_margin="@dimen/pad_text_test"
-        />
-    <TextView
-        android:id="@+id/startTestId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="@string/start_at"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="@dimen/pad_text_test"
-        />
+        <TextView
+            android:id="@+id/titleTestId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_title_test"
+            android:textColor="@color/black"
+            android:text="@string/example_test"
+            android:layout_margin="@dimen/pad_text_test"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/descTestId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pad_text_test"
+            android:text="@string/example_test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dateTestId"
+            app:layout_constraintStart_toStartOf="@id/titleTestId"
+            app:layout_constraintTop_toBottomOf="@id/titleTestId" />
+
+        <TextView
+            android:id="@+id/dateTestId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_date_test"
+            android:text="@string/date_test"
+            android:layout_margin="@dimen/pad_text_test"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/timeTestId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_time_test"
+            android:text="@string/start_at"
+            app:layout_constraintEnd_toEndOf="@id/dateTestId"
+            app:layout_constraintTop_toBottomOf="@id/dateTestId"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

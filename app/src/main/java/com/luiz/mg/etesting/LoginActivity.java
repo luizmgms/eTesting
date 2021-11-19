@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
             if(validFields()) {
                 //Tudo certo
                 Toast.makeText(getApplicationContext(),
-                        getResources().getString(R.string.login_sucess),
+                        getResources().getString(R.string.login_success),
                         Toast.LENGTH_SHORT).show();
 
                 SharedPreferences preferences =

@@ -11,19 +11,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.luiz.mg.etesting.adapter.AdapterTest;
+import com.luiz.mg.etesting.models.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestsActivity extends AppCompatActivity {
 
@@ -43,13 +39,14 @@ public class TestsActivity extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleColor(Color.TRANSPARENT);
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
 
-        ArrayList<String> listTests = new ArrayList<>();
+        ArrayList<Test> listTests = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            listTests.add("Teste "+i);
+            Test test = new Test("Teste "+ i, "Teste sobre o teste "+i,
+                    "20/08/1985", i+":00");
+            listTests.add(test);
         }
-        Log.d("list", listTests.toString());
 
-        //ReclycerView
+        //RecyclerView
         RecyclerView recyclerView = findViewById(R.id.listViewId);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
 

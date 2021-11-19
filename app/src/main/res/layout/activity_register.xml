@@ -61,7 +61,7 @@
         android:id="@+id/textViewLoginId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/doit_login"
+        android:text="@string/do_it_login"
         android:padding="@dimen/text"
         android:layout_margin="@dimen/text"
         app:layout_constraintStart_toStartOf="parent"

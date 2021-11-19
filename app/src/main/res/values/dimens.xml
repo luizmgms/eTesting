@@ -6,4 +6,7 @@
     <dimen name="pad_text_test">10dp</dimen>
     <dimen name="card_corner_radius">8dp</dimen>
     <dimen name="margin_card">5dp</dimen>
+    <dimen name="size_time_test">14sp</dimen>
+    <dimen name="size_date_test">18sp</dimen>
+    <dimen name="size_title_test">20sp</dimen>
 </resources>

@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (validFields()) {
                 //Tudo certo
                 Toast.makeText(getApplicationContext(),
-                        getResources().getString(R.string.register_sucess),
+                        getResources().getString(R.string.register_success),
                         Toast.LENGTH_SHORT).show();
             }
         });

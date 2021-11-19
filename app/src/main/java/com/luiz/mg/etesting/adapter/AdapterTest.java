@@ -11,15 +11,16 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.luiz.mg.etesting.R;
+import com.luiz.mg.etesting.models.Test;
 
 import java.util.ArrayList;
 
 public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHolder> {
 
-    ArrayList<String> listTests;
+    ArrayList<Test> listTests;
 
     //Construtor
-    public AdapterTest(ArrayList<String> list) {
+    public AdapterTest(ArrayList<Test> list) {
         this.listTests = list;
     }
 
@@ -34,8 +35,12 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ItemTestViewHolder holder, int position) {
-        String test = listTests.get(position);
-        holder.textTest.setText(test);
+        Test test = listTests.get(position);
+        holder.titleTest.setText(test.getTitle());
+        holder.descTest.setText(test.getDesc());
+        holder.dateTest.setText(test.getDate());
+        String time = "Inicia às " + test.getTime();
+        holder.timeTest.setText(time);
         holder.cardTest.setOnClickListener(view ->
                 Toast.makeText(view.getContext(), "Vai fazer o teste " + position + "?",
                         Toast.LENGTH_SHORT).show());
@@ -49,12 +54,18 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
     //INNER CLASS
     public static class ItemTestViewHolder extends RecyclerView.ViewHolder{
 
-        TextView textTest;
+        TextView titleTest;
+        TextView dateTest;
+        TextView descTest;
+        TextView timeTest;
         CardView cardTest;
 
         public ItemTestViewHolder(View view) {
             super(view);
-            textTest = view.findViewById(R.id.titleTestId);
+            titleTest = view.findViewById(R.id.titleTestId);
+            dateTest = view.findViewById(R.id.dateTestId);
+            descTest = view.findViewById(R.id.descTestId);
+            timeTest = view.findViewById(R.id.timeTestId);
             cardTest = view.findViewById(R.id.cardViewId);
         }
 
