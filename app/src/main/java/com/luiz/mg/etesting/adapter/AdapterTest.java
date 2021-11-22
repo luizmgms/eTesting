@@ -1,15 +1,18 @@
 package com.luiz.mg.etesting.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.luiz.mg.etesting.QuestionActivity;
 import com.luiz.mg.etesting.R;
 import com.luiz.mg.etesting.models.Test;
 
@@ -42,8 +45,7 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
         String time = "Inicia às " + test.getTime();
         holder.timeTest.setText(time);
         holder.cardTest.setOnClickListener(view ->
-                Toast.makeText(view.getContext(), "Vai fazer o teste " + position + "?",
-                        Toast.LENGTH_SHORT).show());
+                showAlertDialog(holder.titleTest.getContext()));
     }
 
     @Override
@@ -69,5 +71,29 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
             cardTest = view.findViewById(R.id.cardViewId);
         }
 
+    }
+
+    private void showAlertDialog(Context ctx) {
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(ctx);
+        alert.setIcon(android.R.drawable.ic_dialog_alert);
+
+        alert.setTitle(ctx.getResources().getString(R.string.to_do_test));
+        alert.setMessage(ctx.getResources().getString(R.string.realy_to_do_test));
+
+        alert.setPositiveButton(ctx.getResources().getString(R.string.positive),
+                (dialogInterface, i) -> {
+                    Intent intent = new Intent(ctx, QuestionActivity.class);
+
+        });
+
+        alert.setNegativeButton(ctx.getResources().getString(R.string.negative),
+                (dialogInterface, i) -> {
+
+        });
+
+
+        alert.create();
+        alert.show();
     }
 }
