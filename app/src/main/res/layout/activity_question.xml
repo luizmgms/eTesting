@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:layout_margin="@dimen/pad_image_question"
-                android:src="@drawable/collapse"
                 android:contentDescription="@string/img_of_question"/>
 
             <TextView

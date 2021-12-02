@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/pad_text_test"
-            android:text="@string/example_test"
+            android:text="@string/example_num_q"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/dateTestId"
             app:layout_constraintStart_toStartOf="@id/titleTestId"
