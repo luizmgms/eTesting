@@ -22,7 +22,7 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
 
     ArrayList<Test> listTests;
 
-    //Construtor
+    //Constructor
     public AdapterTest(ArrayList<Test> list) {
         this.listTests = list;
     }
@@ -79,11 +79,12 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
         alert.setIcon(android.R.drawable.ic_dialog_alert);
 
         alert.setTitle(ctx.getResources().getString(R.string.to_do_test));
-        alert.setMessage(ctx.getResources().getString(R.string.realy_to_do_test));
+        alert.setMessage(ctx.getResources().getString(R.string.really_to_do_test));
 
         alert.setPositiveButton(ctx.getResources().getString(R.string.positive),
                 (dialogInterface, i) -> {
                     Intent intent = new Intent(ctx, QuestionActivity.class);
+                    ctx.startActivity(intent);
 
         });
 
@@ -91,7 +92,6 @@ public class AdapterTest extends RecyclerView.Adapter<AdapterTest.ItemTestViewHo
                 (dialogInterface, i) -> {
 
         });
-
 
         alert.create();
         alert.show();

@@ -22,7 +22,11 @@
     <string name="menu_logout">Sair</string>
     <string name="menu_about">Sobre</string>
     <string name="to_do_test">Fazer Teste</string>
-    <string name="realy_to_do_test">Deseja realmente realizar essa prova? Em caso afirmativo você não poderá sair da aplicação. Se sair a prova se encerrará automaticamente.</string>
+    <string name="really_to_do_test">Deseja realmente realizar essa prova? Em caso afirmativo você não poderá sair da aplicação. Se sair a prova se encerrará automaticamente.</string>
     <string name="positive">Vamos lá</string>
     <string name="negative">Agora não</string>
+    <string name="question">Questão 01</string>
+    <string name="img_of_question">Imagem da questão</string>
+    <string name="example_of_question_1">A respeito dos diversos tipos de equipamentos de rede, assinale a alternativa que indica corretamente o nome do equipamento de rede capaz de realizar uma conexão entre diferentes redes de modo a permitir a troca de informações entre elas, mas que seja capaz também de controlar o fluxo da informação, possibilitando, por exemplo, a criação de rotas mais curtas e rápidas.</string>
+    <string name="res">Imagem da questão</string>
 </resources>

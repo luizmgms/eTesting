@@ -9,4 +9,9 @@
     <dimen name="size_time_test">14sp</dimen>
     <dimen name="size_date_test">18sp</dimen>
     <dimen name="size_title_test">20sp</dimen>
+    <dimen name="pad_layout">8dp</dimen>
+    <dimen name="margin_box_title_question">4dp</dimen>
+    <dimen name="size_title_question">18sp</dimen>
+    <dimen name="pad_title_question">4dp</dimen>
+    <dimen name="pad_image_question">4dp</dimen>
 </resources>
