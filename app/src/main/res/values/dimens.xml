@@ -14,4 +14,6 @@
     <dimen name="size_title_question">18sp</dimen>
     <dimen name="pad_title_question">4dp</dimen>
     <dimen name="pad_image_question">4dp</dimen>
+    <dimen name="pad_text_question">4dp</dimen>
+    <dimen name="padd_radio_buttons">4dp</dimen>
 </resources>
